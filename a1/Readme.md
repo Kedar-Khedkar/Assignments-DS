@@ -8,6 +8,9 @@
 |---ClientMain.java
 
 ## First compile all the code in Client and Server folder
+```
+javac Client/*.java  && javac Server/*.java  
+```
 
 ### Open one terminal and Run:
 
@@ -21,19 +24,12 @@ rmiregistry 5000
 java Server.ServerMain 
 ```
 
-or
 
-```
-java ServerMain 
-```
 ### Open another terminal and Run:
 ```
 java Client.ClientMain  
 ```
-or 
-```
-java ClientMain
-```
+
 
 #### With no input from user change ClientMain and compile 
 ```
