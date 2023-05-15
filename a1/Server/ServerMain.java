@@ -1,6 +1,9 @@
 package Server;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
+/**
+ * This Java class starts a server using RMI (Remote Method Invocation) technology.
+ */
 
 public class ServerMain {
     public static void main(String[] args) {

@@ -3,6 +3,9 @@ package Client;
 import java.rmi.Naming;
 import java.util.Scanner;
 import Server.ServerInterface;
+/**
+ * This Java class registers a client with a server and broadcasts a message to all registered clients.
+ */
 
 public class ClientMain {
     public static void main(String[] args) {

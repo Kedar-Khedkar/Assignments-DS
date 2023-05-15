@@ -4,6 +4,10 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This Java class implements a server interface that allows clients to register and broadcast messages
+ * to all registered clients.
+ */
 public class ServerImplementation extends UnicastRemoteObject implements ServerInterface {
     private List<Client.ClientInterface> clients;
 
