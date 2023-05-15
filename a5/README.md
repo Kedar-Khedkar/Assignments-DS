@@ -1,14 +1,16 @@
-##Run the file as usual,
-###compile using:
+
+## Run the file as usual
+
+### compile using:
 
 ```
  javac tokenring.java
 ```
 
-###And then run using
+### And then run using:
 
 ```
 java tokenring
 ```
 
-###use comments in the code to understand
+#### Use comments in the code to understand
