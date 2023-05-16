@@ -10,7 +10,7 @@ arguments, exceptions etc. within a module. The IDL file is saved as “Calc.idl
 Map the IDL file into its equivalent JAVA files using the following command:<br>
 `idlj –fall Calc.idl`
 
-If getting error like: 'command idlj not found', then use the command ```sudo apt get install openjdk-8-jdk-headless```. 
+If getting error like this in Ubuntu: 'command idlj not found', then use the command ```sudo apt get install openjdk-8-jdk-headless```. 
 <br>
 
 ### The above commands lead to the formation of the following files within the package:
@@ -29,32 +29,37 @@ h) `DivisionByZeroHelper.java` : This Class provides helper methods [write(), re
 i) `DivisionByZeroHolder.java` : This Class provides a holder for instances of the DivisionByZero exception. The DivisionByZeroHolder class implements the Streamable interface, which is used by CORBA for marshaling and unmarshaling data between distributed objects.<br><br>
 
 ## STEP3
-
-Compile the server using the following command:<br>
-`javac CalcServer.java`
-
-Compile the client using the following command:<br>
-`javac CalcClient.java`
+For Installing CORBA and all other required dependencies in Ubuntu.<br>
+Enter this in terminal `sudo apt-get install maven`<br>
+Then install the dependencies using  `mvn dependency:copy-dependencies`.
 
 ## STEP4
-
-Compile the codes in CalcApp using the following command:<br>
-`javac CalcApp/*.java`
+Compile the server, client CalcPackage and CalcApp using the following command:<br>
+`javac CalcApp/*.java CalcApp/CalcPackage/*.java CalcClient.java CalcServer.java`
 
 ## STEP5
 
 Start the Name Service using the following command:<br>
-`start orbd –ORBInitialPort 1050 –ORBInitialHost localhost`
+
+<b>For Windows</b> <br>
+`start orbd –ORBInitialPort 1050 –ORBInitialHost localhost`<br>
+<b>For Ubuntu</b><br>
+`orbd -ORBInitialPort 1050 -ORBInitialHost localhost &`<br>
 
 ## STEP6
 
 Start the server using the following command:<br>
-`java CalcServer –ORBInitialPort 1050 –ORBInitialHost localhost`
+<b>For Windows</b> <br>
+`java CalcServer –ORBInitialPort 1050 –ORBInitialHost localhost`<br>
+<b>For Ubuntu</b><br>
+`java -cp .:target/dependency/* CalcServer -ORBInitialPort 1050 -ORBInitialHost localhost`<br>
 
 ## STEP7
 
 Start the Client using the following command:<br>
 
 Run this command on new Terminal<br>
-
-`java CalcClient –ORBInitialPort 1050 –ORBInitialHost localhost`
+<b>For Windows</b> <br>
+`java CalcClient –ORBInitialPort 1050 –ORBInitialHost localhost`<br>
+<b>For Ubuntu</b><br>
+`java -cp .:target/dependency/* CalcClient -ORBInitialPort 1050 -ORBInitialHost localhost`<br>
