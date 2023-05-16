@@ -9,6 +9,8 @@ arguments, exceptions etc. within a module. The IDL file is saved as “Calc.idl
 
 Map the IDL file into its equivalent JAVA files using the following command:<br>
 `idlj –fall Calc.idl`
+
+If getting error like: 'command idlj not found', then use the command ```sudo apt get install openjdk-8-jdk-headless```. 
 <br>
 
 ### The above commands lead to the formation of the following files within the package:
