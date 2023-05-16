@@ -31,11 +31,18 @@ i) `DivisionByZeroHolder.java` : This Class provides a holder for instances of t
 ## STEP3
 For Installing CORBA and all other required dependencies in Ubuntu.<br>
 Enter this in terminal `sudo apt-get install maven`<br>
-Then install the dependencies using  `mvn dependency:copy-dependencies`.
+Then install the dependencies using  `mvn dependency:copy-dependencies`.<br>
+Add the path to dependencies by adding it in the bashrc file.<br>
+Type `nano ~/.bashrc` in terminal.<br>
+Scroll till the end and add this line `export CLASSPATH=/home/pranay/Assignments-DS/a2/target/dependency/*`.<br>
+Replace this line `/home/pranay/Assignments-DS/a2/target/dependency/*` with your dependencies path and save it.<br>
+Apply changes by typing `source ~/.bashrc` in terminal.
+
 
 ## STEP4
 Compile the server, client CalcPackage and CalcApp using the following command:<br>
 `javac CalcApp/*.java CalcApp/CalcPackage/*.java CalcClient.java CalcServer.java`
+
 
 ## STEP5
 
