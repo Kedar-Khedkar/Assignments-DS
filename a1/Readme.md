@@ -7,7 +7,7 @@
 |---ClientImplementation.java
 |---ClientMain.java
 
-## First compile all the code in Client and Server folder
+### First compile all the code in Client and Server folder
 ```
 javac Client/*.java  && javac Server/*.java  
 ```
@@ -44,3 +44,5 @@ java Client.ClientMain
             e.printStackTrace();
         }
 ```
+## Output
+<img title="a title" alt="Alt text" src="a1/Screenshot from 2023-05-15 10-22-27.png">
