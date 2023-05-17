@@ -70,3 +70,6 @@ Run this command on new Terminal<br>
 `java CalcClient –ORBInitialPort 1050 –ORBInitialHost localhost`<br>
 <b>For Ubuntu</b><br>
 `java -cp .:target/dependency/* CalcClient -ORBInitialPort 1050 -ORBInitialHost localhost`<br>
+
+### Output
+<img title="a title" alt="Alt text" src="a2/Screenshot from 2023-05-18 00-02-16.png">
