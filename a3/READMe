@@ -11,4 +11,18 @@ In this case, the input array contains numbers from 1 to 100, and the code distr
 The expected output for an input array containing numbers from 1 to 100 is indeed 5050, which represents the sum of all the numbers in the array.
 
 Therefore, the code is functioning correctly, and the output of 5050 is expected.
-   
+  
+If fatafati
+Step1: sudo apt install mpich
+Step2: mpiexec --version
+Step3: pip install mpi4py
+Step4: nanp ~/.basshrc
+Add the following lines
+export PATH="/usr/lib/x86_64-linux-gnu/openmpi/bin:$PATH"
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu/openmpi/lib:$LD_LIBRARY_PATH"
+export PATH="/usr/bin:$PATH"
+Step5: source ~/.bashrc
+Step6: mpiexec -n <no_of_processors> python DistributedSum.py
+check the python version and execute the above command accordingly. If this does not work check the path to python by using the command (which python)
+then run the code using mpiexec -n <no_of_processors> <path to python file> DistributedSum.py
+He krun pn gandla tr chatgpt kara
