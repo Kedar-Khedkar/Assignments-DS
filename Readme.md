@@ -12,6 +12,31 @@ With RMI, you can make the "add" method of the "Calculator" object available for
 <br>
 
 In summary, RMI allows Java programs to communicate and interact with remote objects as if they were local objects. It simplifies distributed computing by providing a transparent way to invoke methods on objects located in different Java Virtual Machines.
+
+# MPI
+MPI stands for Message Passing Interface, and it's a widely used programming model for developing parallel applications that run on multiple processors or computers.
+
+In simple terms, MPI allows different processes or programs to communicate and collaborate with each other by passing messages. It provides a set of functions and methods that enable these processes to exchange data, synchronize their activities, and work together towards a common goal.
+
+Imagine you have a task that can be divided into smaller subtasks, and you want to distribute those subtasks across multiple computers or processors to complete the work faster. MPI helps you accomplish that.
+
+Here's how MPI works:
+
+- You start by dividing your task into smaller subtasks, and each subtask is assigned to a separate process.
+
+- These processes run concurrently on different processors or computers. They can communicate with each other by sending messages.
+
+- Processes can send messages containing data, instructions, or requests to other processes. They can also receive messages from other processes.
+
+- The communication between processes is explicit, meaning that you have control over when and how messages are sent and received.
+
+- You can use MPI functions or methods to send messages, receive messages, synchronize the execution of processes, and perform collective operations (e.g., broadcasting data to all processes or gathering data from all processes).
+
+- By using MPI, you can harness the power of parallel computing and distribute the workload across multiple processors or computers, enabling faster and more efficient execution of your application.
+
+- It's important to note that MPI is a specification rather than a specific implementation. There are several MPI implementations available (such as Open MPI, MPICH, or Intel MPI), and you can choose the one that best suits your needs and environment.
+
+Overall, MPI simplifies the development of parallel applications by providing a standardized way for processes to communicate, collaborate, and work together towards solving complex problems in a distributed computing environment.
 # Berkeleys Algorithm
 Berkeley time synchronization is an algorithm used in distributed systems to coordinate and adjust the clocks of different nodes. The goal is to minimize clock differences and ensure a common notion of time among the nodes.
 
