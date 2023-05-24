@@ -1,0 +1,3 @@
+AddClient.java: This file represents the client-side code. It performs the RMI lookup to locate the remote object, calls the remote method add() on the server, and displays the result.
+AddImplementor.java: This file represents the server-side implementation of the remote object. It extends the UnicastRemoteObject class and implements the Addition interface. The add() method contains the actual logic for adding two numbers. 
+AddServer.java: This file represents the server-side code. It creates an instance of the AddImplementor class, which is the remote object implementation. It then binds the remote object to a specific URL using the Naming.rebind() method.
