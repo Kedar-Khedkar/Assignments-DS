@@ -1,0 +1,14 @@
+/addition-rmi$ 
+
+javac *.java
+
+rmic AddImplementor
+
+rmiregiry 5252
+
+java AddServer 
+
+java AddClient 
+
+Output:11
+

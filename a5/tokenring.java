@@ -32,6 +32,7 @@ class tokenring {
 
     //Keep passing the token until sender is found
     System.out.print("Token passing:");
+    
     for (
       int i = token, j = token;
       (i % nodes) != sender;
