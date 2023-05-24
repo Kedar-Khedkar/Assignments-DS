@@ -35,7 +35,10 @@ Then install the dependencies using  `mvn dependency:copy-dependencies`.<br>
 Add the path to dependencies by adding it in the bashrc file.<br>
 Type `nano ~/.bashrc` in terminal.<br>
 Scroll till the end and add this line `export CLASSPATH=/home/pranay/Assignments-DS/a2/target/dependency/*`.<br>
-Replace this line `/home/pranay/Assignments-DS/a2/target/dependency/*` with your dependencies path and save it.<br>
+Replace this line `/home/pranay/Assignments-DS/a2/target/dependency/*` with your dependencies path and save it.<br>(Instead of this command for assignment 2: export CLASSPATH=/home/pranay/Assignments-DS/a2/target/dependency/*
+Use this command:
+echo '$(pwd)/target/dependency/*' >> ~/.bashrc
+NOTE: echo nantr single quotes taka, DON'T use double quotes, also put double >> not > or you'll erase system .bashrc)
 Apply changes by typing `source ~/.bashrc` in terminal.
 
 
