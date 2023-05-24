@@ -3,6 +3,12 @@ import java.util.concurrent.TimeUnit;
 
 class tokenring {
 
+// This is the main method of a Java program that simulates a token ring network. It takes user input
+// for the number of nodes in the network, the sender and receiver nodes, and the data to be
+// transmitted. It then passes a token around the network until it reaches the sender node, at which
+// point the sender node sends the data to the receiver node. The program uses a for loop and the
+// TimeUnit class to simulate the passing of the token and the transmission of the data. Finally, the
+// program prints out a message indicating that the receiver node has received the data.
   public static void main(String args[]) throws Throwable {
     Scanner scan = new Scanner(System.in);
 

@@ -5,6 +5,12 @@ public class Bully {
   public static boolean states[];
   public static int coordinator;
 
+ // The `init()` method initializes the system by creating an array of boolean values representing the
+ // states of the processes. It sets all the values to `true` to indicate that all processes are
+ // initially up. It also sets the `coordinator` variable to 4, indicating that process 4 is the
+ // initial coordinator. The `getStatus()` method prints the current state of the system by iterating
+ // over the `states` array and printing the status of each process. If a process is the coordinator,
+ // it is indicated by an arrow pointing to it.
   public static void init() {
     states = new boolean[5];
     System.out.println("THE SYSTEM HAS 5 processes ID's FROM 0 to 4");
@@ -27,6 +33,7 @@ public class Bully {
     }
   }
 
+// These are two methods in the Bully class that are used to bring a process up or down respectively.
   public static void processUp(int id) {
     if (!states[id]) {
       states[id] = true;
@@ -46,6 +53,11 @@ public class Bully {
     }
   }
 
+/**
+ * The function elects a coordinator among a group of processes.
+ * 
+ * @param id The id parameter represents the process id of the process that is initiating the election.
+ */
   public static void electCoord(int id) {
     System.out.println("Election started by process: " + id);
     boolean flag = false;
@@ -68,6 +80,13 @@ public class Bully {
     }
   }
 
+/**
+ * The function sends a message between two nodes and handles cases where the coordinator or either
+ * node is down.
+ * 
+ * @param idSender The ID of the sender who is trying to send the message.
+ * @param idReceiver The ID of the receiver who is supposed to receive the message.
+ */
   public static void sendMsg(int idSender, int idReceiver) {
     if (states[coordinator]) {
       if (states[idSender] && states[idReceiver]) {
@@ -84,6 +103,10 @@ public class Bully {
     }
   }
 
+  // This is the main method of the Bully algorithm implementation in Java. It initializes the system,
+  // takes user input to bring processes up or down, and to send messages between processes. It uses a
+  // menu-driven approach to take user input and calls the appropriate methods to perform the desired
+  // action. The program runs in a loop until the user chooses to exit.
   public static void main(String args[]) {
     init();
     int choice, id, sender, receiver;

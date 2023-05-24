@@ -8,6 +8,7 @@ import java.rmi.registry.LocateRegistry;
 public class ServerMain {
     public static void main(String[] args) {
         try {
+           // This code is starting a server using RMI (Remote Method Invocation) technology.
             ServerInterface server = new ServerImplementation();
             LocateRegistry.createRegistry(1099);
             Naming.rebind("rmi://localhost/Server", server);

@@ -10,6 +10,8 @@ import Server.ServerInterface;
 public class ClientMain {
     public static void main(String[] args) {
         try {
+           // This code is registering a client with a server using Java RMI (Remote Method Invocation)
+           // and broadcasting a message to all registered clients.
             ServerInterface server = (ServerInterface) Naming.lookup("rmi://localhost/Server");
             ClientInterface client = new ClientImplementation();
             server.registerClient(client);
