@@ -39,6 +39,24 @@ The skeleton is an object, acts as a gateway for the server side object. All the
 - It reads the parameter for the remote method
 - It invokes the method on the actual remote object, and
 - It writes and transmits (marshals) the result to the caller.
+# CORBA
+CORBA, which stands for Common Object Request Broker Architecture, is a standardized framework that enables different software components or objects to communicate and interact with each other in a distributed system. It provides a platform-independent and language-independent way for objects written in various programming languages to collaborate seamlessly across networked environments.
+
+Key points about CORBA:
+
+- Distributed Object Communication: CORBA allows objects located on different machines to communicate and exchange information transparently. Objects can invoke methods and share data as if they were local, even though they may reside on different computers or platforms.
+- Object Request Broker (ORB): The Object Request Broker acts as the central component in CORBA. It provides the infrastructure for objects to locate each other, exchange messages, and invoke methods across a network. The ORB handles tasks such as message routing, object activation, parameter marshaling, and security.
+
+### ORB
+Certainly! In simple terms, the Object Request Broker (ORB) in CORBA is like a middleman that helps different programs or objects talk to each other, even if they are written in different programming languages or run on different computers.
+
+Imagine you have two friends who speak different languages and live in different countries. They want to communicate with each other, but they don't understand each other's languages. The ORB is like a translator and facilitator that helps them understand each other.
+
+Similarly, in CORBA, the ORB helps objects or programs written in different languages or running on different computers understand each other. It takes care of tasks like sending messages between the objects, translating the messages into a format that the receiving object can understand, and making sure the messages reach the right destination.
+
+The ORB also helps in finding the objects you want to communicate with. It knows where they are located and can connect you to the right object, no matter where it is.
+
+Overall, the ORB makes it possible for different programs or objects to communicate smoothly, just like a translator and facilitator that bridges the language and location gaps.
 # MPI
 MPI stands for Message Passing Interface, and it's a widely used programming model for developing parallel applications that run on multiple processors or computers.
 
