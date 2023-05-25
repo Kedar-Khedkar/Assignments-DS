@@ -20,7 +20,25 @@ A stub is a client-side proxy object that represents the remote object. It resid
 - Skeleton:
 A skeleton is a server-side object that resides on the server and acts as an intermediary between the client and the actual remote object. When the server receives a remote method call from the client, the skeleton receives the request and extracts the necessary information, such as the method name and parameters. The skeleton then dispatches the request to the appropriate remote object by invoking the corresponding method. Once the method is executed, the result is returned to the skeleton, which marshals it and sends it back to the client.
 
-In summary, the stub and skeleton work together to enable communication between the client and the server in RMI. The stub handles the communication on the client-side, while the skeleton manages the server-side communication and delegates the actual method invocation to the remote object.
+Understanding stub and skeleton
+RMI uses stub and skeleton object for communication with the remote object.
+
+A remote object is an object whose method can be invoked from another JVM. Let's understand the stub and skeleton objects:
+
+### stub
+The stub is an object, acts as a gateway for the client side. All the outgoing requests are routed through it. It resides at the client side and represents the remote object. When the caller invokes method on the stub object, it does the following tasks:
+
+- It initiates a connection with remote Virtual Machine (JVM),
+- It writes and transmits (marshals) the parameters to the remote Virtual Machine (JVM),
+- It waits for the result
+- It reads (unmarshals) the return value or exception, and
+- It finally, returns the value to the caller.
+### skeleton
+The skeleton is an object, acts as a gateway for the server side object. All the incoming requests are routed through it. When the skeleton receives the incoming request, it does the following tasks:
+
+- It reads the parameter for the remote method
+- It invokes the method on the actual remote object, and
+- It writes and transmits (marshals) the result to the caller.
 # MPI
 MPI stands for Message Passing Interface, and it's a widely used programming model for developing parallel applications that run on multiple processors or computers.
 
