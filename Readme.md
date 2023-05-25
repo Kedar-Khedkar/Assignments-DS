@@ -12,7 +12,15 @@ With RMI, you can make the "add" method of the "Calculator" object available for
 <br>
 
 In summary, RMI allows Java programs to communicate and interact with remote objects as if they were local objects. It simplifies distributed computing by providing a transparent way to invoke methods on objects located in different Java Virtual Machines.
+In the context of Remote Method Invocation (RMI) in Java, stub and skeleton are two important components used for communication between a client and a remote server object.
 
+- Stub:
+A stub is a client-side proxy object that represents the remote object. It resides on the client-side and acts as a local representative of the remote object. When a client invokes a method on the stub, the stub is responsible for handling the communication details, such as making the remote method call, marshaling the parameters, and sending them to the server-side. The result returned by the server is then unmarshaled and returned to the client. The stub provides a convenient way for the client to interact with the remote object without having to deal with the low-level network communication details.
+
+- Skeleton:
+A skeleton is a server-side object that resides on the server and acts as an intermediary between the client and the actual remote object. When the server receives a remote method call from the client, the skeleton receives the request and extracts the necessary information, such as the method name and parameters. The skeleton then dispatches the request to the appropriate remote object by invoking the corresponding method. Once the method is executed, the result is returned to the skeleton, which marshals it and sends it back to the client.
+
+In summary, the stub and skeleton work together to enable communication between the client and the server in RMI. The stub handles the communication on the client-side, while the skeleton manages the server-side communication and delegates the actual method invocation to the remote object.
 # MPI
 MPI stands for Message Passing Interface, and it's a widely used programming model for developing parallel applications that run on multiple processors or computers.
 
